@@ -1,8 +1,8 @@
 
 var onLoad = function (event) {
   // Key listener.
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+  window.addEventListener("keydown", (kevent) => {
+    if (kevent.key === "Escape") {
       isRunning = !isRunning;
 
       if (isRunning) {
