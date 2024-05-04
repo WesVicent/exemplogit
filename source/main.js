@@ -15,21 +15,19 @@
     canvas.id = "screen";
     canvas.width = 500;
     canvas.height = 500;
-    canvas.style.border = "1px solid #CCCCCC";
+    canvas.style.border = "2px solid";
 
     const container = document.createElement("div");
     container.id = "container";
 
-    const corpo = document.getElementsByTagName("body")[0];
-    corpo.appendChild(container);
+    const body = document.querySelector("body");
+    body.appendChild(container);
 
     container.appendChild(canvas);
 
-    const screen = document.getElementById("screen");
-
-    if (screen.getContext) {
+    if (canvas.getContext) {
       var isRunning = true;
-      var context = screen.getContext("2d");
+      var context = canvas.getContext("2d");
 
       var reverse = false;
       x = 50;
@@ -47,15 +45,15 @@
 
         context.beginPath();
         context.arc(x, y, 50, 0, 2 * Math.PI);
-        context.fillStyle = "#1180ff";
+        context.fillStyle = "#00009C";
         context.fill();
 
         if (reverse) {
-          x -= 5;
-          y -= 5;
+          x -= 25;
+          y -= 25;
         } else {
-          x += 5;
-          y += 5;
+          x += 10;
+          y += 10;
         }
 
         if (y >= 450) {
