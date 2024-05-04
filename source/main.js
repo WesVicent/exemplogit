@@ -15,12 +15,12 @@
     canvas.id = "screen";
     canvas.width = 500;
     canvas.height = 500;
-    canvas.style.border = "2px solid";
+    canvas.style.border = "1px solid #CCCCCC";
 
     const container = document.createElement("div");
     container.id = "container";
 
-    const body = document.querySelector("body");
+    const body = document.getElementsByTagName("body")[0];
     body.appendChild(container);
 
     container.appendChild(canvas);
@@ -45,15 +45,15 @@
 
         context.beginPath();
         context.arc(x, y, 50, 0, 2 * Math.PI);
-        context.fillStyle = "#00009C";
+        context.fillStyle = "#1180ff";
         context.fill();
 
         if (reverse) {
-          x -= 25;
-          y -= 25;
+          x -= 5;
+          y -= 5;
         } else {
-          x += 10;
-          y += 10;
+          x += 5;
+          y += 5;
         }
 
         if (y >= 450) {
