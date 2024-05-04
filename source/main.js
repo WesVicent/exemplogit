@@ -58,10 +58,12 @@
 
         if (y >= 450) {
           reverse = true;
+          canvas.style.border = "2px solid #ff0000";
         }
 
         if (y <= 50) {
           reverse = false;
+          canvas.style.border = "2px solid #1180ff";
         }
 
         context.restore();
